@@ -15,6 +15,8 @@
 		E5D73447206F146500777A55 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5D73445206F146500777A55 /* Main.storyboard */; };
 		E5D73449206F146500777A55 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5D73448206F146500777A55 /* Assets.xcassets */; };
 		E5D7344C206F146500777A55 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5D7344A206F146500777A55 /* LaunchScreen.storyboard */; };
+		E5D8BBB720928E9C00B703F7 /* GroundNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D8BBB620928E9C00B703F7 /* GroundNode.swift */; };
+		E5E1C35120929B9200089AB1 /* SkyNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E1C35020929B9200089AB1 /* SkyNode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,9 @@
 		E5D73448206F146500777A55 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E5D7344B206F146500777A55 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E5D7344D206F146500777A55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E5D73453206F39F900777A55 /* TODO.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = TODO.md; sourceTree = "<group>"; };
+		E5D8BBB620928E9C00B703F7 /* GroundNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroundNode.swift; sourceTree = "<group>"; };
+		E5E1C35020929B9200089AB1 /* SkyNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkyNode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,17 +65,52 @@
 		E5D7343A206F146500777A55 /* Parachute Game */ = {
 			isa = PBXGroup;
 			children = (
-				E5D7343B206F146500777A55 /* AppDelegate.swift */,
-				E5D7343D206F146500777A55 /* GameScene.sks */,
-				E5D7343F206F146500777A55 /* Actions.sks */,
 				E5D73441206F146500777A55 /* GameScene.swift */,
 				E5D73443206F146500777A55 /* GameViewController.swift */,
-				E5D73445206F146500777A55 /* Main.storyboard */,
-				E5D73448206F146500777A55 /* Assets.xcassets */,
-				E5D7344A206F146500777A55 /* LaunchScreen.storyboard */,
-				E5D7344D206F146500777A55 /* Info.plist */,
+				E5E1C35220929BD100089AB1 /* Objects */,
+				E5D73455206F3AFA00777A55 /* Game Interface */,
+				E5D73454206F3ADF00777A55 /* User Interface */,
+				E5D73456206F3B0E00777A55 /* Other */,
 			);
 			path = "Parachute Game";
+			sourceTree = "<group>";
+		};
+		E5D73454206F3ADF00777A55 /* User Interface */ = {
+			isa = PBXGroup;
+			children = (
+				E5D7344A206F146500777A55 /* LaunchScreen.storyboard */,
+				E5D73445206F146500777A55 /* Main.storyboard */,
+				E5D73448206F146500777A55 /* Assets.xcassets */,
+			);
+			path = "User Interface";
+			sourceTree = "<group>";
+		};
+		E5D73455206F3AFA00777A55 /* Game Interface */ = {
+			isa = PBXGroup;
+			children = (
+				E5D7343D206F146500777A55 /* GameScene.sks */,
+				E5D7343F206F146500777A55 /* Actions.sks */,
+			);
+			path = "Game Interface";
+			sourceTree = "<group>";
+		};
+		E5D73456206F3B0E00777A55 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				E5D7343B206F146500777A55 /* AppDelegate.swift */,
+				E5D7344D206F146500777A55 /* Info.plist */,
+				E5D73453206F39F900777A55 /* TODO.md */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		E5E1C35220929BD100089AB1 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				E5E1C35020929B9200089AB1 /* SkyNode.swift */,
+				E5D8BBB620928E9C00B703F7 /* GroundNode.swift */,
+			);
+			path = Objects;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,7 +187,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5E1C35120929B9200089AB1 /* SkyNode.swift in Sources */,
 				E5D73442206F146500777A55 /* GameScene.swift in Sources */,
+				E5D8BBB720928E9C00B703F7 /* GroundNode.swift in Sources */,
 				E5D73444206F146500777A55 /* GameViewController.swift in Sources */,
 				E5D7343C206F146500777A55 /* AppDelegate.swift in Sources */,
 			);
@@ -288,7 +330,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VWSMFUQHS2;
-				INFOPLIST_FILE = "Parachute Game/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Parachute Game/Other/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.designsbylagb.parachute-game.Parachute-Game";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -303,7 +345,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VWSMFUQHS2;
-				INFOPLIST_FILE = "Parachute Game/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Parachute Game/Other/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.designsbylagb.parachute-game.Parachute-Game";
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -63,8 +63,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     private func spawnDrone() {
         let drone = SKSpriteNode(imageNamed: "Drone")
-            drone.size = CGSize(width: 40.0, height: 25.0)
-            drone.position = CGPoint(x: 0, y: self.frame.size.height - CGFloat(arc4random_uniform(200))) // Start On Left Side Of Screen //
+            drone.size = CGSize(width: 64.0, height: 40.0)
+            drone.position = CGPoint(x: 0, y: self.frame.size.height - CGFloat(arc4random_uniform(200))) // Start On Left Side Of Screen
             drone.physicsBody = SKPhysicsBody(rectangleOf: drone.size)
             drone.physicsBody?.isDynamic = true
             drone.physicsBody?.categoryBitMask = PhysicsCategory.Drone
@@ -75,6 +75,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
             let moveAction = SKAction.moveTo(x: self.frame.size.width, duration: 4.0)
             drone.run(moveAction) { drone.removeFromParent(); }
+    }
+    
+    private func dropPackage() {
+        let package = SKSpriteNode(imageNamed: "Package")
+            package.size = CGSize(width: 35, height: 35)
+        
     }
     
     private func shootProjectile(atLocation: CGPoint) {
